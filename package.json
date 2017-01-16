@@ -1,0 +1,24 @@
+{
+  "name": "Buget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjzhome/Buget.git"
+  },
+  "keywords": [],
+  "author": "zjzhome",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zjzhome/Buget/issues"
+  },
+  "homepage": "https://github.com/zjzhome/Buget#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "source-map": "^0.5.6"
+  }
+}
