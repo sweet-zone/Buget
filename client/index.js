@@ -1,13 +1,19 @@
 
 (function() {
 
+  var serverAddr = 'http://bugreport.com';
 
-  function uploadErrorMessage(serverAddr) {
-
+  function uploadErrorMessage(addr, param) {
+    var img = new Image();
+    img.onload = img.onerror = function() {
+      img = null;
+    }
+    img.src = addr + '?' + param;
   }
 
-  function structErrorFlag(row, col) {
-
+  function handleGlobalError(errMsg, row, col) {
+    var param = 'errMsg=' + errMsg + '&row=' + row + '&col=' + col + '&t=' + (+new Date());
+    uploadErrorMessage(serverAddr, param);
   }
 
   /**
@@ -19,7 +25,7 @@
    * @param  {[type]} stack      调用栈
    */
   window.onerror = function(errMsg, url, row, col, stack) {
-
+    handleGlobalError(errMsg, row, col);
   }
 
 })();

@@ -29,6 +29,8 @@ function getOriginalRowCol(map, row, col, callback) {
     line: row,
     column: col
   })
+  // todo 
+  // 统计该处报错的次数(某个版本内)
   callback(res)
 }
 
