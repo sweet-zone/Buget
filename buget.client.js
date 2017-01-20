@@ -1,9 +1,9 @@
 
 (function() {
 
-  var serverAddr = 'http://bugreport.com';
+  var serverAddr = 'http://bugreport-example.com'; // 修改此处为消息上报地址
 
-  function uploadErrorMessage(addr, param) {
+  function uploadMessage(addr, param) {
     var img = new Image();
     img.onload = img.onerror = function() {
       img = null;
@@ -13,7 +13,7 @@
 
   function handleGlobalError(errMsg, row, col) {
     var param = 'errMsg=' + errMsg + '&row=' + row + '&col=' + col + '&t=' + (+new Date());
-    uploadErrorMessage(serverAddr, param);
+    uploadMessage(serverAddr, param);
   }
 
   /**

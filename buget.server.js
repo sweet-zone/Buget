@@ -4,7 +4,21 @@
 * 根据 sourcemap 获取源文件行列
 *
 * Inspired by http://www.cnblogs.com/yexiaochai/p/6246490.html
+*
+* // use
+* var parser = require('../server/index.js');
+* var path = require('path');
+*
+* parser({
+*   filePath: path.join(__dirname, 'bundle.js.map'),
+*   row: 20242,
+*   col: 20,
+*   callback: function(res) {
+*     console.log(res)
+*   }
+* })
 */
+
 var fs = require('fs')
 
 var sourceMap = require('source-map')
